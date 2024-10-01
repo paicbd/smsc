@@ -1,20 +1,5 @@
-## Quick reference
-
-**Where to get support:**
-
-[PAiC-BD SMSC Official Support](https://paic-bd.com/smsc/ "PAiC SMSC Documentation")
-
-**Source code**
-
-[Github repository](https://github.com/paicbd/smsc "Github repository")
-
-## Supported tags
-latest
-
 ## What is PAiC-BD SMSC?
 PAiC BD open source SMSC supports all SMS types and goes beyond traditional text messages with its integration to multiple Social Media Messaging channels, and it also enables access to conversational and generative A.I. via a non-internet dependent SMS channel, and it will support RCS in 2025.
-
-Our SMSC also offers a native Mobile Number Portability (MNP) API, which ensures adequate routing when connected to multiple MNOs and messaging routes.
 
 PAiC BD SMSC can connect with telecom operators (MNOs) via multiple protocols, including traditional SMPP and Signaling (SS7/SIGTRAN), as well as HTTP and Diameter (2025), giving it the necessary flexibility to support any use case and type of access.
 
@@ -148,16 +133,17 @@ Our SMSC is designed with a modular architecture, allowing you to deploy each mo
 
 The following images are published in docker hub for each module:
 
-- paicbusinessdev/db-insert-data
-- paicbusinessdev/smsc-routing-module
-- paicbusinessdev/ss7-module
-- paicbusinessdev/smsc-management-fe
-- paicbusinessdev/smpp-client-module
-- paicbusinessdev/smpp-server-module
-- paicbusinessdev/http-client-module
-- paicbusinessdev/http-server-module
-- paicbusinessdev/retries-module
-- paicbusinessdev/orchestrator-module
+- [paicbusinessdev/smsc-routing-module](https://hub.docker.com/r/paicbusinessdev/smsc-routing-module/tags)
+- [paicbusinessdev/orchestrator-module](https://hub.docker.com/r/paicbusinessdev/orchestrator-module/tags)
+- [paicbusinessdev/retries-module](https://hub.docker.com/r/paicbusinessdev/retries-module/tags)
+- [paicbusinessdev/db-insert-data](https://hub.docker.com/r/paicbusinessdev/db-insert-data/tags)
+- [paicbusinessdev/smpp-server-module](https://hub.docker.com/r/paicbusinessdev/smpp-server-module/tags)
+- [paicbusinessdev/smpp-client-module](https://hub.docker.com/r/paicbusinessdev/smpp-client-module/tags)
+- [paicbusinessdev/http-server-module](https://hub.docker.com/r/paicbusinessdev/http-server-module/tags)
+- [paicbusinessdev/http-client-module](https://hub.docker.com/r/paicbusinessdev/http-client-module/tags)
+- [paicbusinessdev/ss7-module](https://hub.docker.com/r/paicbusinessdev/ss7-module/tags)
+- [paicbusinessdev/smsc-management-be](https://hub.docker.com/r/paicbusinessdev/smsc-management-be/tags)
+- [paicbusinessdev/smsc-management-fe](https://hub.docker.com/r/paicbusinessdev/smsc-management-fe/tags)
 
 An example of a single Docker Compose file for all modules is shown below: 
 
@@ -850,3 +836,7 @@ Credentials are defined in the SMSC Management BE's compose. By default they are
 Username: admin
 Password: admin
 ```
+
+**Where to get support:**
+
+[PAiC-BD SMSC Official Support](https://paic-bd.com/smsc/ "PAiC SMSC Documentation")
