@@ -12,7 +12,7 @@ PAiC BD SMSC can connect with telecom operators (MNOs) via multiple protocols, i
 
 ### Where to get support:
 
-[PAiC-BD Official Support](https://paic-bd.com/smsc/ "PAiC SMSC Documentation")
+[PAiC-BD Official Support](https://paic-bd.com/smsc/ "PAiC BD Official Support")
 
 ## How to get started?
 
