@@ -10,7 +10,7 @@ PAiC BD SMSC can connect with telecom operators (MNOs) via multiple protocols, i
 - No-code Service Creation Environment for faster time-to-market
 - Social Media Messaging and A.I (including ChatGPT) integration
 
-**Where to get support:**
+# Where to get support:
 
 [PAiC-BD Official Support](https://paic-bd.com/smsc/ "PAiC SMSC Documentation")
 
