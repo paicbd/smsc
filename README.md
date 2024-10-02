@@ -10,6 +10,10 @@ PAiC BD SMSC can connect with telecom operators (MNOs) via multiple protocols, i
 - No-code Service Creation Environment for faster time-to-market
 - Social Media Messaging and A.I (including ChatGPT) integration
 
+**Where to get support:**
+
+[PAiC-BD Official Support](https://paic-bd.com/smsc/ "PAiC SMSC Documentation")
+
 ## How to get started?
 
 ### Install pre-requisites
@@ -836,7 +840,3 @@ Credentials are defined in the SMSC Management BE's compose. By default they are
 Username: admin
 Password: admin
 ```
-
-**Where to get support:**
-
-[PAiC-BD SMSC Official Support](https://paic-bd.com/smsc/ "PAiC SMSC Documentation")
