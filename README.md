@@ -847,5 +847,5 @@ To obtain the source code for the SMSC, you can execute the provided Bash script
 
 ```shell
 chmod +x fork-and-clone-smsc-repos.sh
-./git-clone-smsc-projects.sh "<destination_directory>"
+./fork-and-clone-smsc-repos.sh "<destination_directory>"
 ```
