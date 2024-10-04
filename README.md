@@ -840,3 +840,12 @@ Credentials are defined in the SMSC Management BE's compose. By default they are
 Username: admin
 Password: admin
 ```
+
+### Getting the Source Code
+
+To obtain the source code for the SMSC, you can execute the provided Bash script:
+
+```shell
+chmod +x fork-and-clone-smsc-repos.sh
+./fork-and-clone-smsc-repos.sh "<destination_directory>"
+```
