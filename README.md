@@ -1,4 +1,4 @@
-##Introduction to PAiCore Technologies SMSC
+## Introduction to PAiCore Technologies SMSC
 
 Our Short Message Service Center (SMSC) is both capable and flexible enough to be deployed for high-capacity and mission critical use cases, as well as for complex routing and intricate message flows. It supports various SMS types, including Application-to-Person (A2P), Person-to-Application (P2A), and Person-to-Person (P2P), ensuring compatibility with a wide range of messaging scenarios.
 
