@@ -1,18 +1,25 @@
-## What is PAiC-BD SMSC?
-PAiC BD open source SMSC supports all SMS types and goes beyond traditional text messages with its integration to multiple Social Media Messaging channels, and it also enables access to conversational and generative A.I. via a non-internet dependent SMS channel, and it will support RCS in 2025.
+##Introduction to PAiCore Technologies SMSC
 
-PAiC BD SMSC can connect with telecom operators (MNOs) via multiple protocols, including traditional SMPP and Signaling (SS7/SIGTRAN), as well as HTTP and Diameter (2025), giving it the necessary flexibility to support any use case and type of access.
+Our Short Message Service Center (SMSC) is both capable and flexible enough to be deployed for high-capacity and mission critical use cases, as well as for complex routing and intricate message flows. It supports various SMS types, including Application-to-Person (A2P), Person-to-Application (P2A), and Person-to-Person (P2P), ensuring compatibility with a wide range of messaging scenarios.
 
-**Key Points:**
+The PAiCore Technologies SMSC can be configured to support multi-protocol flows such as:
+* HTTP or SMPP to SS7/SIGTRAN and vice versa
+* HTTP to SMPP and vice versa
+* HTTP to Diameter... and many more
+  
+PAiCore Technologies' SMSC provides a robust and versatile solution for a wide range of messaging needs, from the high-capacity and security use cases typical of MNOs/MVNOs, to the varied and ad-hoc use cases VAS providers and enterprises need.
 
-- PAiC-BD SMSC is 100% open source, enabling continuous innovation and use case adaptation
-- Able to process 60,000 TPS, allowing for more than 20,000 SMS per second
-- No-code Service Creation Environment for faster time-to-market
-- Social Media Messaging and A.I (including ChatGPT) integration
+## Key Features of SMSC - Open Source Version
+
+* Its open source nature enables continuous innovation and use case adaptation from both our team and the contributions of the open source users.
+* Able to process up to 12,000 TPS per instance.
+* It supports traffic flows over multiple protocols – SS7 / SIGTRAN / HTTP / SMPP.
+* Built-in broadcast SMS functionalities.
+* Advanced DLR mapping capabilities.
 
 ## Where to get support:
 
-[PAiC-BD Official Support](https://paic-bd.com/smsc/ "PAiC BD Official Support")
+[PAiCore Technologies Official Support](https://paicore.tech/smsc/ "PAiCore Technologies Official Support")
 
 ## How to get started?
 
