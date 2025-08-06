@@ -162,7 +162,8 @@ An example of a single Docker Compose file for all modules is shown below:
 version: '3.8'
 services:
   smsc-management-be:
-    image: paicbusinessdev/smsc-management-be:latest
+    image: paicbusinessdev/smsc-management-be:[`2.0.0-27`](https://hub.docker.com/layers/paicbusinessdev/smsc-management-be/2.0.0-27/images/sha256-05edf4e093da7cafdd37b6cbc0fac5aed782fdefb6dcb02d3881fd8c6bb9cbdd)
+
     ulimits:
       nofile:
         soft: 1000000
