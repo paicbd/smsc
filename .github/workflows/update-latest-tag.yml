@@ -1,0 +1,36 @@
+name: Update All Docker Tags in README
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Cada hora
+  workflow_dispatch:
+
+jobs:
+  update-tags:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Get latest tags and update README
+        run: |
+          declare -a images=(
+            "paicbusinessdev/smsc-management-be"
+            "paicbusinessdev/smsc-routing-module"
+            "paicbusinessdev/smsc-fe"
+          )
+
+          for image in "${images[@]}"; do
+            TAG=$(curl -s "https://hub.docker.com/v2/repositories/${image}/tags?page_size=1" | jq -r '.results[0].name')
+            echo "Found latest tag for $image: $TAG"
+            escaped_image=$(echo $image | sed 's/\//\\\//g')
+            sed -i -E "s/(${escaped_image}:)[^\s\"]+/\1$TAG/g" README.md
+          done
+
+      - name: Commit and push if changes exist
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Update Docker tags in README" || echo "No changes"
+          git push
