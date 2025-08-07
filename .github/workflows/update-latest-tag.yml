@@ -42,6 +42,7 @@ jobs:
       - name: Create Pull Request if changes exist
         uses: peter-evans/create-pull-request@v5
         with:
+          token: ${{ secrets.PERSONAL_TOKEN }}
           commit-message: "chore: update Docker image tags in README"
           title: "chore: update Docker image tags in README"
           body: |
@@ -52,4 +53,3 @@ jobs:
           branch: auto/update-docker-tags
           branch-suffix: timestamp
           delete-branch: true
-
