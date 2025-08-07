@@ -2,7 +2,7 @@ name: Update All Docker Tags in README
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Cada hora
+    - cron: '0 * * * *'  # Every hour
   workflow_dispatch:
 
 jobs:
@@ -24,7 +24,8 @@ jobs:
             TAG=$(curl -s "https://hub.docker.com/v2/repositories/${image}/tags?page_size=1" | jq -r '.results[0].name')
             echo "Found latest tag for $image: $TAG"
             escaped_image=$(echo $image | sed 's/\//\\\//g')
-            sed -i -E "s/(${escaped_image}:)[^\s\"]+/\1$TAG/g" README.md
+            # Only replace if the tag is ':latest'
+            sed -i -E "s/(${escaped_image}:)latest/\1$TAG/g" README.md
           done
 
       - name: Commit and push if changes exist
