@@ -2,7 +2,7 @@ name: Update All Docker Tags in README
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Every hour
+    - cron: '0 0 1 * *'  # Runs monthly on the 1st at 00:00 UTC
   workflow_dispatch:
 
 permissions:
@@ -11,6 +11,7 @@ permissions:
 jobs:
   update-tags:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -18,9 +19,17 @@ jobs:
       - name: Get latest tags and update README
         run: |
           declare -a images=(
-            "paicbusinessdev/smsc-management-be"
             "paicbusinessdev/smsc-routing-module"
-            "paicbusinessdev/smsc-fe"
+            "paicbusinessdev/orchestrator-module"
+            "paicbusinessdev/retries-module"
+            "paicbusinessdev/db-insert-data"
+            "paicbusinessdev/smpp-server-module"
+            "paicbusinessdev/smpp-client-module"
+            "paicbusinessdev/http-server-module"
+            "paicbusinessdev/http-client-module"
+            "paicbusinessdev/ss7-module"
+            "paicbusinessdev/smsc-management-be"
+            "paicbusinessdev/smsc-management-fe"
           )
 
           for image in "${images[@]}"; do
@@ -30,15 +39,15 @@ jobs:
             sed -i -E "s|(${escaped_image}:)latest|\1$TAG|g" README.md
           done
 
-      - name: Commit and push if changes exist
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+      - name: Create Pull Request if changes exist
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: "chore: update Docker image tags in README"
+          title: "chore: update Docker image tags in README"
+          body: |
+            This PR updates all `:latest` Docker image references in the README with the most recent stable tags from Docker Hub.
 
-          if git diff --quiet; then
-            echo "No changes to commit."
-          else
-            git add README.md
-            git commit -m "Update Docker tags in README"
-            git push
-          fi
+            - Triggered automatically via GitHub Actions
+            - Based on tags: latest updated version per image
+          branch: auto/update-docker-tags
+          delete-branch: true
