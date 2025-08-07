@@ -50,4 +50,6 @@ jobs:
             - Triggered automatically via GitHub Actions
             - Based on tags: latest updated version per image
           branch: auto/update-docker-tags
+          branch-suffix: timestamp
           delete-branch: true
+
