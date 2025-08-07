@@ -162,7 +162,7 @@ An example of a single Docker Compose file for all modules is shown below:
 version: '3.8'
 services:
   smsc-management-be:
-    image: paicbusinessdev/smsc-management-be:latest
+    image: paicbusinessdev/smsc-management-be:2.0.0-27
     ulimits:
       nofile:
         soft: 1000000
@@ -227,7 +227,7 @@ services:
     network_mode: host
 
   smsc-management-fe:
-    image: paicbusinessdev/smsc-management-fe:latest
+    image: paicbusinessdev/smsc-management-fe:2.0.0-23
     container_name: smsc-management-fe
     depends_on:
       smsc-management-be:
@@ -240,7 +240,7 @@ services:
       - "80:80"
 
   smpp-client-module:
-    image: paicbusinessdev/smpp-client-module:latest
+    image: paicbusinessdev/smpp-client-module:2.0.0-20
     ulimits:
       nofile:
         soft: 1000000
@@ -301,7 +301,7 @@ services:
 
 
   smpp-server-module:
-    image: paicbusinessdev/smpp-server-module:latest
+    image: paicbusinessdev/smpp-server-module:2.0.0-20
     ulimits:
       nofile:
         soft: 1000000
@@ -371,7 +371,7 @@ services:
     network_mode: host
 
   http-client-module:
-    image: paicbusinessdev/http-client-module:latest
+    image: paicbusinessdev/http-client-module:2.0.0-18
     ulimits:
       nofile:
         soft: 1000000
@@ -428,7 +428,7 @@ services:
     network_mode: host
 
   http-server-module:
-    image: paicbusinessdev/http-server-module:latest
+    image: paicbusinessdev/http-server-module:2.0.0-19
     container_name: http-server
     ulimits:
       nofile:
@@ -488,7 +488,7 @@ services:
     network_mode: host
 
   ss7-client-module:
-    image: paicbusinessdev/ss7-module:latest
+    image: paicbusinessdev/ss7-module:2.0.0-21
     ulimits:
       nofile:
         soft: 1000000
@@ -542,7 +542,7 @@ services:
     network_mode: host
 
   retries-module:
-    image: paicbusinessdev/retries-module:latest
+    image: paicbusinessdev/retries-module:2.0.0-18
     ulimits:
       nofile:
         soft: 1000000
@@ -591,7 +591,7 @@ services:
     network_mode: host
 
   orchestrator-module:
-    image: paicbusinessdev/orchestrator-module:latest
+    image: paicbusinessdev/orchestrator-module:2.0.0-19
     ulimits:
       nofile:
         soft: 1000000
@@ -653,7 +653,7 @@ services:
     network_mode: host
 
   smsc-routing-module:
-    image: paicbusinessdev/smsc-routing-module:latest
+    image: paicbusinessdev/smsc-routing-module:2.0.0-22
     ulimits:
       nofile:
         soft: 1000000
@@ -723,7 +723,7 @@ services:
     network_mode: host
 
   db-insert-data:
-    image: paicbusinessdev/db-insert-data:latest
+    image: paicbusinessdev/db-insert-data:2.0.0-20
     ulimits:
       nofile:
         soft: 1000000
