@@ -18,7 +18,7 @@ Supported messaging flows:
 - Open-source core for extensibility and community-driven improvements.  
 - Up to **12,000 TPS per instance** (hardware-dependent).  
 - Support for **SMPP / Http**.  
-- Compatible with Kafka, ScyllaDB, Redis Cluster, PostgreSQL/Citus.  
+- Compatible with Kafka, ScyllaDB, Redis Cluster, PostgreSQL.  
 
 ---
 
