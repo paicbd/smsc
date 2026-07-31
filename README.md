@@ -42,7 +42,6 @@ The `.tar.gz` package includes:
 - Module definitions  
 - Installer and validation scripts  
 - Directory structure  
-- License folder  
 - **A README inside the package with full step-by-step instructions**  
 
 ---
@@ -76,23 +75,7 @@ scripts/
 
 ---
 
-## 3. License Requirement
-
-A valid license file is required to run the SMSC.
-
-To request a license for the Free Basic Version, **you must contact us directly** via:
-
-👉 https://paicore.tech/smsc/
-
-Once you receive the license file, place it here:
-
-```bash
-sudo cp /path/to/license.txt ./smsc/data/license/license_paic.txt
-```
-
----
-
-## 4. Run Installer
+## 3. Run Installer
 
 ```bash
 sudo ./installer.sh
@@ -109,30 +92,6 @@ The installer performs:
   - PostgreSQL/Citus  
 - Deployment of all SMSC Free Basic modules  
 
----
-
-# Docker Images – Free Basic Version
-
-### SMSC Modules
-
-```
-paicbusinessdev/free-basic-db-insert-data:3.1.0-5
-paicbusinessdev/free-basic-http-client-module:3.1.0-4
-paicbusinessdev/free-basic-http-server-module:3.1.0-4
-paicbusinessdev/free-basic-retries-module:3.1.0-4
-paicbusinessdev/free-basic-smpp-client-module:3.1.0-5
-paicbusinessdev/free-basic-smpp-server-module:3.1.0-6
-paicbusinessdev/free-basic-smsc-management-be:3.1.0-1
-paicbusinessdev/free-basic-smsc-management-fe:3.1.0-2
-paicbusinessdev/free-basic-smsc-routing-module:3.1.0-6
-paicbusinessdev/kafka:4.0.0
-paicbusinessdev/scylla:5.2.0
-paicbusinessdev/pg-partman
-provectuslabs/kafka-ui:latest
-
-```
-
----
 
 # Manual Deployment
 
@@ -142,7 +101,7 @@ If you require a manual deployment (Docker):
 
 **Please contact us to request access to the internal technical documentation.**
 
-👉 https://paicore.tech/smsc/
+👉 https://paicore.tech/resources/
 
 ---
 
